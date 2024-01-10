@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://duabazan.vercel.app
+Host: https://www.duabazan.store
 
 # Sitemaps
-Sitemap: https://duabazan.vercel.app/sitemap.xml
+Sitemap: https://www.duabazan.store/sitemap.xml
