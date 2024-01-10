@@ -2,11 +2,11 @@ import { NextResponse } from "next/server";
 
 export async function GET(request) {
   const res = [
-    "Tag before",
-    "Tag after",
-    "Business card before",
-    "Business card after",
-  ].map((i) => `/images/card/1200/${i}.png`);
+    "tag_before",
+    "tag_after",
+    "business_card_before",
+    "business_card_after",
+  ].map((i) => `/images/card/640/${i}.png`);
 
   return NextResponse.json(res);
 }

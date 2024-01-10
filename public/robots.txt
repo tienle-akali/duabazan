@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://duabazan.vercel.app
+
+# Sitemaps
+Sitemap: https://duabazan.vercel.app/sitemap.xml
