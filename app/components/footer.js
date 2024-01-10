@@ -1,20 +1,8 @@
-import { Facebook, QrCode } from "@mui/icons-material";
+"use client";
 import { Box, Button, Container, Toolbar, Typography } from "@mui/material";
 import Link from "next/link";
 import { useMemo } from "react";
-
-const footerMenu = [
-  {
-    label: "Fanpage Dứa Bazan",
-    icon: <Facebook />,
-    href: process.env.NEXT_PUBLIC_FACEBOOK,
-  },
-  {
-    label: "Thanh toán",
-    icon: <QrCode />,
-    href: "/payment",
-  },
-];
+import { topMenu } from "./appbar";
 
 function Copyright() {
   const currentYear = useMemo(() => new Date().getFullYear(), []);
@@ -37,13 +25,14 @@ function FooterMenu() {
         gap: 2,
       }}
     >
-      {footerMenu.map((item, index) => (
+      {topMenu.map((item, index) => (
         <Button
           key={index}
           variant="contained"
           startIcon={item.icon}
           LinkComponent={Link}
           href={item.href}
+          target={item.target}
         >
           {item.label}
         </Button>

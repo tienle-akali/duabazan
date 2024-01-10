@@ -1,27 +1,52 @@
 "use client";
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
+
+const paymentAccounts = [
+  {
+    bankName: "Vietinbank",
+    accountNumber: "0327009879",
+    qrcode: "ICB-0327009879-print",
+  },
+  {
+    bankName: "TP-Bank",
+    accountNumber: "00001583200",
+    qrcode: "TPB-00001583200-print",
+  },
+];
 
 function PaymentContent() {
   return (
-    <Box sx={{ my: 2 }}>
-      <Typography align="center" paragraph>
-        Cảm ơn Quý khách đã ủng hộ nhà Dứa 🥰
-        <br />
+    <Box sx={{ my: 2, textAlign: "center" }}>
+      <Typography variant="h6" gutterBottom>
+        Cảm ơn Quý khách đã tin tưởng mua hàng tại nhà Dứa 🥰
+      </Typography>
+      <Typography sx={{ fontStyle: "italic" }}>
         Quý khách đặt hàng xin vui lòng thanh toán chuyển khoản bằng cách quét
         mã QR bên dưới:
       </Typography>
-      <Image
-        src={`/images/payment/TPB-00001583200-compact.png`}
-        alt="TP-Bank 00001583200"
-        width={160}
-        height={160}
-        loading="lazy"
-        style={{
-          display: "block",
-          margin: "auto",
-        }}
-      />
+
+      <Grid container spacing={3} justifyContent="center" sx={{ my: 3 }}>
+        {paymentAccounts.map((item, index) => (
+          <Grid item key={index}>
+            <Image
+              src={`/images/payment/${item.qrcode}.png`}
+              alt={`${item.bankName} ${item.accountNumber}`}
+              width={250}
+              height={250}
+              // loading="lazy"
+              priority
+              style={{
+                display: "block",
+                width: "100%",
+                height: "auto",
+                margin: "auto",
+                borderRadius: 16,
+              }}
+            />
+          </Grid>
+        ))}
+      </Grid>
     </Box>
   );
 }

@@ -24,7 +24,7 @@ export default function MainThemeProvider({ children }) {
           },
         },
         palette: {
-          mode: "dark",
+          mode: "light",
           primary: {
             main: mainColor,
             contrastText: "#fff",
