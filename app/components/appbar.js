@@ -1,5 +1,5 @@
 "use client";
-import { Facebook, Percent, QrCode } from "@mui/icons-material";
+import { Facebook, Percent, PriceChange, QrCode } from "@mui/icons-material";
 import {
   AppBar,
   Box,
@@ -29,6 +29,11 @@ const topMenu = [
     label: "Ưu đãi",
     icon: <Percent />,
     href: "/promotion",
+  },
+  {
+    label: "Bảng giá",
+    icon: <PriceChange />,
+    href: "/price",
   },
 ];
 
