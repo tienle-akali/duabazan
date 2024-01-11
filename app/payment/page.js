@@ -1,5 +1,5 @@
 "use client";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 
 const paymentAccounts = [
@@ -22,28 +22,35 @@ function PaymentContent() {
         Cảm ơn Quý khách đã tin tưởng mua hàng tại nhà Dứa 🥰
       </Typography>
       <Typography sx={{ fontStyle: "italic" }}>
-        Quý khách đặt hàng xin vui lòng thanh toán chuyển khoản bằng cách quét
-        mã QR bên dưới:
+        Quý khách đặt hàng xin vui lòng thanh toán chuyển khoản bằng cách quét 1
+        trong 2 mã QR bên dưới:
       </Typography>
 
-      <Grid container spacing={3} justifyContent="center" sx={{ my: 3 }}>
+      <Grid container spacing={2} justifyContent="center" sx={{ my: 3 }}>
         {paymentAccounts.map((item, index) => (
-          <Grid item key={index}>
-            <Image
-              src={`/images/payment/${item.qrcode}.png`}
-              alt={`${item.bankName} ${item.accountNumber}`}
-              width={250}
-              height={250}
-              // loading="lazy"
-              priority
-              style={{
-                display: "block",
-                width: "100%",
-                height: "auto",
-                margin: "auto",
-                borderRadius: 16,
-              }}
-            />
+          <Grid item xs={6} sm="auto" key={index}>
+            <Card sx={{ pb: 2 }}>
+              <Image
+                src={`/images/payment/${item.qrcode}.png`}
+                alt={`${item.bankName} ${item.accountNumber}`}
+                width={250}
+                height={250}
+                // loading="lazy"
+                priority
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: "auto",
+                  margin: "auto",
+                  borderRadius: 16,
+                }}
+              />
+              <Typography sx={{ fontWeight: "bold" }} color="primary">
+                {item.bankName}
+                <br />
+                STK: {item.accountNumber}
+              </Typography>
+            </Card>
           </Grid>
         ))}
       </Grid>

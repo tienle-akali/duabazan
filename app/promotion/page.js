@@ -8,7 +8,7 @@ export default function Promotion() {
       <main>
         <Grid container spacing={3} justifyContent="center">
           <Grid item xs={12} sm={6} lg={4}>
-            <Card sx={{ display: "inline-block", mx: "auto" }}>
+            <Card>
               <Image
                 src={`/images/card/640/business_card_after.png`}
                 alt="Ưu đãi Tết"
