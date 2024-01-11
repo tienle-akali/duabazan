@@ -3,6 +3,7 @@ import MainThemeProvider from "./components/ThemeProvider";
 import { MainFooter } from "./components/footer";
 import { sharedMetadata } from "./components/sharedMetadata";
 import { TopAppbar } from "./components/appbar";
+import { GoogleTagManager } from "@next/third-parties/google";
 // import './globals.css'
 
 const inter = Inter({ subsets: ["latin"] });
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
           <MainFooter />
         </MainThemeProvider>
       </body>
+      <GoogleTagManager gtmId="GTM-NN5WJ58V" />
     </html>
   );
 }
