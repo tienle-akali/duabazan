@@ -18,7 +18,7 @@ function FooterMenu() {
   return (
     <Box
       sx={{
-        my: 2,
+        py: 2,
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",
@@ -46,6 +46,21 @@ function MainFooter() {
     <footer>
       <Container>
         <FooterMenu />
+        <Box
+          component="iframe"
+          sx={{
+            border: "none",
+            overflow: "hidden",
+            mx: "auto",
+            py: 3,
+            display: "block",
+            maxWidth: "100%",
+          }}
+          src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fduabazan&width=340&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId=2041712882839941"
+          width={340}
+          allowFullScreen
+          allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+        />
         <Toolbar sx={{ justifyContent: "center" }}>
           <Copyright />
         </Toolbar>

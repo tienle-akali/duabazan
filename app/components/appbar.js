@@ -15,12 +15,6 @@ const SITE_LOGO = process.env.NEXT_PUBLIC_SITE_LOGO;
 
 const topMenu = [
   {
-    label: "Fanpage Dứa Bazan",
-    icon: <Facebook />,
-    href: process.env.NEXT_PUBLIC_FACEBOOK,
-    target: "_blank",
-  },
-  {
     label: "Thanh toán",
     icon: <QrCode />,
     href: "/payment",
@@ -34,6 +28,12 @@ const topMenu = [
     label: "Bảng giá",
     icon: <PriceChange />,
     href: "/price",
+  },
+  {
+    label: "Fanpage",
+    icon: <Facebook />,
+    href: process.env.NEXT_PUBLIC_FACEBOOK,
+    target: "_blank",
   },
 ];
 
