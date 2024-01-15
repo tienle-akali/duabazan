@@ -1,5 +1,5 @@
 "use client";
-import { Box, Card, Container, Skeleton } from "@mui/material";
+import { Box, Card, Container } from "@mui/material";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
