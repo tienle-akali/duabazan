@@ -1,5 +1,14 @@
 "use client";
-import { Facebook, Percent, PriceChange, QrCode } from "@mui/icons-material";
+import {
+  Facebook,
+  FacebookOutlined,
+  Percent,
+  PercentOutlined,
+  PriceChange,
+  PriceChangeOutlined,
+  QrCode,
+  QrCodeOutlined,
+} from "@mui/icons-material";
 import {
   AppBar,
   Box,
@@ -16,22 +25,22 @@ const SITE_LOGO = process.env.NEXT_PUBLIC_SITE_LOGO;
 const topMenu = [
   {
     label: "Thanh toán",
-    icon: <QrCode />,
+    icon: <QrCodeOutlined />,
     href: "/payment",
   },
   {
     label: "Ưu đãi",
-    icon: <Percent />,
+    icon: <PercentOutlined />,
     href: "/promotion",
   },
   {
     label: "Bảng giá",
-    icon: <PriceChange />,
+    icon: <PriceChangeOutlined />,
     href: "/price",
   },
   {
     label: "Fanpage",
-    icon: <Facebook />,
+    icon: <FacebookOutlined />,
     href: process.env.NEXT_PUBLIC_FACEBOOK,
     target: "_blank",
   },
@@ -55,7 +64,7 @@ function TopAppbar() {
               >
                 <Image
                   src={SITE_LOGO}
-                  alt="Dứa Bazan"
+                  alt="Dứa Bazan Logo"
                   width={40}
                   height={40}
                   priority

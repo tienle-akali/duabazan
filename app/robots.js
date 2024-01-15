@@ -3,7 +3,7 @@ export default function robots() {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      // disallow: "/private/",
     },
     sitemap: "https://www.duabazan.store/sitemap.xml",
   };

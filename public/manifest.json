@@ -8,13 +8,13 @@
   "background_color": "#ffffff",
   "icons": [
     {
-      "src": "/images/logo/duabazan.png",
+      "src": "/images/logo/256/duabazan.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/images/logo/duabazan.png",
+      "src": "/images/logo/256/duabazan.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

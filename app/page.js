@@ -1,5 +1,5 @@
 "use client";
-import { Box, Card, Container } from "@mui/material";
+import { Box, Card, Container, Skeleton } from "@mui/material";
 import Image from "next/image";
 import { useCallback, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -45,8 +45,8 @@ function SwiperCards({ cards = [] }) {
                 <Image
                   src={item}
                   alt="Card"
-                  width={640}
-                  height={640}
+                  width={480}
+                  height={480}
                   priority
                   style={{
                     width: "100%",
@@ -87,6 +87,7 @@ export default function Home() {
               justifyContent: "center",
               alignItems: "center",
               minHeight: "50vh",
+              height: "100%",
               margin: "auto",
               maxWidth: {
                 xs: 250,
