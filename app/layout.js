@@ -56,6 +56,9 @@ export async function generateMetadata({ params: { lang } }, parent) {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <meta property="fb:app_id" content="886774486482112" />
+      </head>
       <body className={inter.className}>
         <MainThemeProvider>
           <TopAppbar />
