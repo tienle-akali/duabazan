@@ -5,11 +5,13 @@ import Image from "next/image";
 const paymentAccounts = [
   {
     bankName: "Vietinbank",
+    accountName: "Ngo Thi Xuan Trang",
     accountNumber: "0327009879",
     qrcode: "ICB-0327009879-print",
   },
   {
-    bankName: "TP-Bank",
+    bankName: "TP Bank",
+    accountName: "Le Duc Tien",
     accountNumber: "00001583200",
     qrcode: "TPB-00001583200-print",
   },
@@ -21,9 +23,17 @@ function PaymentContent() {
       <Typography variant="h6" gutterBottom>
         Cảm ơn Quý khách đã tin tưởng mua hàng tại nhà Dứa 🥰
       </Typography>
-      <Typography sx={{ fontStyle: "italic" }}>
-        Quý khách đặt hàng xin vui lòng thanh toán chuyển khoản bằng cách quét 1
-        trong 2 mã QR bên dưới:
+      <Typography>
+        <i>
+          Quý khách đặt hàng xin vui lòng thanh toán chuyển khoản bằng cách quét
+          1 trong 2 mã QR bên dưới với nội dung:
+        </i>
+      </Typography>
+      <Typography sx={{ my: 1 }}>
+        <b>Duabazan + Tên khách + Số điện thoại</b>
+      </Typography>
+      <Typography>
+        Dứa sẽ thông báo lại Quý khách sau khi nhận được giao dịch.
       </Typography>
 
       <Grid container spacing={2} justifyContent="center" sx={{ my: 3 }}>
@@ -47,6 +57,14 @@ function PaymentContent() {
               />
               <Typography sx={{ fontWeight: "bold" }} color="primary">
                 {item.bankName}
+                <br />
+                <Typography
+                  variant="body2"
+                  component="span"
+                  sx={{ textTransform: "uppercase" }}
+                >
+                  {item.accountName}
+                </Typography>
                 <br />
                 STK: {item.accountNumber}
               </Typography>
