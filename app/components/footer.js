@@ -73,7 +73,7 @@ function MessengerPlugin() {
         appId: "886774486482112",
         autoLogAppEvents: true,
         xfbml: true,
-        version: "v12.0",
+        version: "v18.0",
       });
     };
 
