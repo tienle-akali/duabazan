@@ -1,6 +1,7 @@
 "use client";
 import {
   FacebookOutlined,
+  MusicNoteOutlined,
   PercentOutlined,
   PriceChangeOutlined,
   QrCodeOutlined,
@@ -37,7 +38,13 @@ const topMenu = [
   {
     label: "Fanpage",
     icon: <FacebookOutlined />,
-    href: process.env.NEXT_PUBLIC_FACEBOOK,
+    href: "https://www.facebook.com/duabazan",
+    target: "_blank",
+  },
+  {
+    label: "Tiktok",
+    icon: <MusicNoteOutlined />,
+    href: "https://www.tiktok.com/@duabazan",
     target: "_blank",
   },
 ];
